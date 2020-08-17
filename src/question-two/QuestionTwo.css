@@ -1,0 +1,9 @@
+.custom-card {
+    cursor: pointer;
+}
+
+.custom-card:hover {
+    width: unset !important;
+    z-index: 1;
+    background-color: #fff;
+}
