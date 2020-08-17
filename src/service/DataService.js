@@ -14,35 +14,47 @@ export const DataService = {
   //
   //  SAMPLE GraphQL Call
   //
-  // getJobsWithSearchTerm: (searchTerm) => {
-  //   return graphClient.query({
-  //     query: gql`
-  //     query ($searchTerm: String){
-  //       jobs(name: $searchTerm) {
-  //         name,
-  //         start,
-  //         end,
-  //         contact {
-  //           id
-  //           name
-  //         }
-  //       }
-  //     }
-  //     `,
-  //     variables: {
-  //       searchTerm: searchTerm
-  //     }
-  //   })
-  //     .then(result => result.data)
-  //     .then(data => data.jobs)
-  // },
+  getJobsWithSearchTerm: searchTerm => {
+    return graphClient.query({
+      query: gql`
+      query ($searchTerm: String){
+        jobs(name: $searchTerm) {
+          id,
+          name,
+          start,
+          end,
+          contact {
+            id
+            name
+          }
+        }
+      }
+      `,
+      variables: {
+        searchTerm: searchTerm
+      }
+    })
+      .then(result => result.data)
+      .then(data => data.jobs)
+  },
 
-  //
-  //  SAMPLE Normal call
-  //
-  // getJobs: () => {
-  //   return axiosClient.get('/jobs')
-  //     .then(result => result.data.map(x => Object.assign({}, x, { id: x.id + '' })))
-  // },
-  
+  getJobs: () => {
+    return axiosClient.get('/jobs').then(({ data }) => data);
+  },
+
+  getResources: () => {
+    return axiosClient.get('/resources').then(({ data }) => data);
+  },
+
+  getActivities: () => {
+    return axiosClient.get('/activities').then(({ data }) => data);
+  },
+
+  getJobAllocations: () => {
+    return axiosClient.get('/jobAllocations').then(({ data }) => data);
+  },
+
+  getActivityAllocations: () => {
+    return axiosClient.get('/activityAllocations').then(({ data }) => data);
+  },
 }
