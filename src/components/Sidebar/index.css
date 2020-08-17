@@ -1,0 +1,15 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px 0;
+    background-color: #223048;
+    justify-content: space-between;
+}
+.sidebar__item {
+    margin-bottom: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 17.5px;
+    cursor: pointer;
+    background-color: #c4c4c4;
+}

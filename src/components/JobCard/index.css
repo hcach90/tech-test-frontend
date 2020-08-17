@@ -1,0 +1,44 @@
+.job-card {
+    margin-bottom: 20px;
+    padding: 20px;
+    min-width: 300px;
+    background-color: #fff;
+    color: #c4c4c4;
+}
+.job-card p {
+    margin: 0;
+}
+
+.job-card__title {
+    display: flex;
+}
+.job-card__title > p:first-child {
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+}
+
+.job-card__footer {
+    display: flex;
+    margin-top: 20px;
+}
+
+.job-card__time {
+    flex: 1;
+}
+.job-card__time > p:last-child {
+    font-weight: bold;
+}
+
+.job-card__number-of-job {
+    border: 1px solid #3d9bff;
+    color: #3d9bff;
+    text-align: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+}

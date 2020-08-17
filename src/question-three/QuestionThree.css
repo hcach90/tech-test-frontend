@@ -1,0 +1,19 @@
+.question-tree {
+    display: flex;
+    width: 100%;
+}
+.question-tree__right-side {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.question-tree__title{
+    margin: 10px 0;
+    color: #fff;
+    font-size: 25px;
+}
+.question-tree__job-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
